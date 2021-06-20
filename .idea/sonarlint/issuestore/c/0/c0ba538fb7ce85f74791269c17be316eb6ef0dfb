@@ -1,0 +1,25 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ûŒİ
+Q	java:S125)"<This block of commented-out lines of code should be removed.(‡İÄ‘
+m
+java:S3776B"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(Éß÷øÿÿÿÿ
+Q	java:S125D"<This block of commented-out lines of code should be removed.(œ†Ø°
+X	java:S125K"<This block of commented-out lines of code should be removed.(šµ¡š8Ô­¨™¢/
+Q	java:S125h"<This block of commented-out lines of code should be removed.(‹·“Ö
+\
+java:S1075y"ARefactor your code to get this URI from a customizable parameter.(¦¯–ıÿÿÿÿ
+]
+java:S1075‚"ARefactor your code to get this URI from a customizable parameter.(«¬‹™ıÿÿÿÿ
+O
+java:S1117‹"8Rename "port" which hides the field declared at line 54.(©»ÿ’
+O	java:S106Œ"9Replace this use of System.out or System.err by a logger.(†¾âá
+u
+java:S2142 "^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+W	java:S125±"<This block of commented-out lines of code should be removed.(µŒá­ıÿÿÿÿ
+W	java:S125È"<This block of commented-out lines of code should be removed.(å¤÷¶üÿÿÿÿ
+u
+java:S2142ñ"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+u
+java:S2142ù"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+T	java:S106…"9Replace this use of System.out or System.err by a logger.(ïöû¾ùÿÿÿÿ
+W	java:S125‰"<This block of commented-out lines of code should be removed.(ÁÌ»™úÿÿÿÿ
