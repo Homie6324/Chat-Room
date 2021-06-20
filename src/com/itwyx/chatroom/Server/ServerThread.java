@@ -37,6 +37,7 @@ public class ServerThread {
 
     //多客户可以同时与多用户建立通信连接
     public void Service() throws IOException {
+        //对客户端的持续监听
         while (true) {
             Socket socket;
             //未接收到时堵塞
@@ -274,13 +275,13 @@ public class ServerThread {
                                 pw.println("当前群聊无其他用户在线，已自动退出！");
                                 break;
                             } else {
-                                pw.println("您已退出群组聊天室！");
+                                pw.println("您已退出群聊！");
                                 break;
                             }
                         }
 
                     } else {
-                        pw.println("请选择聊天状态！");
+                        pw.println("请重新选择聊天状态！");
                     }
                 }
             } catch (IOException e) {

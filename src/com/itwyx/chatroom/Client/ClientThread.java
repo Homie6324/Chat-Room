@@ -80,8 +80,11 @@ public class ClientThread extends Application {
         taDisplay.setStyle("-fx-text-fill:darkgoldenrod");
         //连接服务器区域
         HBox hBox01 = new HBox();
+        //设置字间距
         hBox01.setSpacing(10);
+        //设置内边距
         hBox01.setPadding(new Insets(10, 20, 10, 20));
+        //设置对齐方式
         hBox01.setAlignment(Pos.CENTER);
         hBox01.getChildren().addAll(new Label("IP地址："), ipAddress, new Label("端口："), port, btConn);
         mainPane.setTop(hBox01);
@@ -90,13 +93,17 @@ public class ClientThread extends Application {
         vBox.setSpacing(10);
         vBox.setPadding(new Insets(10, 20, 10, 20));
         vBox.getChildren().addAll(new Label("消息记录"), taDisplay, new Label("发送消息"), tfSend);
+        //设置布局自适应
         VBox.setVgrow(taDisplay, Priority.ALWAYS);
         mainPane.setCenter(vBox);
 
 
         HBox hBox02 = new HBox();
+        //设置字间距
         hBox02.setSpacing(10);
+        //设置内边距
         hBox02.setPadding(new Insets(10, 20, 10, 20));
+        //设置对齐方式
         hBox02.setAlignment(Pos.CENTER_RIGHT);
         hBox02.getChildren().addAll(btSend, btExit, resourceCode, blog);
         mainPane.setBottom(hBox02);

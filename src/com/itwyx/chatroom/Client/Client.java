@@ -12,11 +12,23 @@ import java.nio.charset.StandardCharsets;
  * @date 2021年6月18日
  */
 
+
 public class Client {
     private final Socket socket;
-
     private final PrintWriter pw;
     private final BufferedReader br;
+
+    public Socket getSocket() {
+        return socket;
+    }
+
+    public PrintWriter getPw() {
+        return pw;
+    }
+
+    public BufferedReader getBr() {
+        return br;
+    }
 
     public Client(String ip, String port) throws IOException {
         //主动向服务器发起连接，实现TCP三次握手
@@ -52,7 +64,7 @@ public class Client {
         return msg;
     }
 
-    public void close() {
+        public void close() {
         try {
             if (socket != null) {
                 socket.close();
