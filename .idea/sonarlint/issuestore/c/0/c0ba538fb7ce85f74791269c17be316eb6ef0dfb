@@ -5,21 +5,21 @@ m
 java:S3776B"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(Ιίχψÿÿÿÿ
 Q	java:S125D"<This block of commented-out lines of code should be removed.(†Ψ°
 X	java:S125K"<This block of commented-out lines of code should be removed.(µ΅8Τ­¨™Ά/
-Q	java:S125h"<This block of commented-out lines of code should be removed.(‹·“Φ
-\
-java:S1075y"ARefactor your code to get this URI from a customizable parameter.(¦―–ύÿÿÿÿ
+Q	java:S125o"<This block of commented-out lines of code should be removed.(‹·“Φ
 ]
-java:S1075‚"ARefactor your code to get this URI from a customizable parameter.(«¬‹™ύÿÿÿÿ
+java:S1075€"ARefactor your code to get this URI from a customizable parameter.(¦―–ύÿÿÿÿ
+]
+java:S1075‰"ARefactor your code to get this URI from a customizable parameter.(«¬‹™ύÿÿÿÿ
 O
-java:S1117‹"8Rename "port" which hides the field declared at line 54.(©»ÿ’
-O	java:S106"9Replace this use of System.out or System.err by a logger.(†Ύβα
+java:S1117’"8Rename "port" which hides the field declared at line 54.(©»ÿ’
+O	java:S106“"9Replace this use of System.out or System.err by a logger.(†Ύβα
 u
-java:S2142 "^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(δ Ή€
-W	java:S125±"<This block of commented-out lines of code should be removed.(µα­ύÿÿÿÿ
-W	java:S125Θ"<This block of commented-out lines of code should be removed.(ε¤χ¶όÿÿÿÿ
+java:S2142¦"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(δ Ή€
+W	java:S125·"<This block of commented-out lines of code should be removed.(µα­ύÿÿÿÿ
+W	java:S125Ξ"<This block of commented-out lines of code should be removed.(ε¤χ¶όÿÿÿÿ
 u
-java:S2142ρ"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(δ Ή€
+java:S2142χ"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(δ Ή€
 u
-java:S2142ω"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(δ Ή€
-T	java:S106…"9Replace this use of System.out or System.err by a logger.(οφϋΎωÿÿÿÿ
-W	java:S125‰"<This block of commented-out lines of code should be removed.(ΑΜ»™ϊÿÿÿÿ
+java:S2142ÿ"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(δ Ή€
+T	java:S106‹"9Replace this use of System.out or System.err by a logger.(οφϋΎωÿÿÿÿ
+W	java:S125"<This block of commented-out lines of code should be removed.(ΑΜ»™ϊÿÿÿÿ

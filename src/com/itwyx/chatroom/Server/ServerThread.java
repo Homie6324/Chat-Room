@@ -20,10 +20,10 @@ import java.util.concurrent.atomic.AtomicBoolean;
  */
 
 public class ServerThread {
-    //服务器监听窗口
-    private final ServerSocket serverSocket;
+    //服务器用于监听窗口
     //定义服务器套接字
-    //创建动态线程池，适合小并发量，容易出现OutOfMemoryError
+    private final ServerSocket serverSocket;
+    //创建动态线程池
     private ExecutorService executorService = Executors.newCachedThreadPool();
     private final ConcurrentHashMap<Socket, String> users = new ConcurrentHashMap();
 
@@ -35,7 +35,6 @@ public class ServerThread {
     }
 
 
-    //多客户可以同时与多用户建立通信连接
     public void Service() throws IOException {
         //对客户端的持续监听
         while (true) {
@@ -104,7 +103,7 @@ public class ServerThread {
         private PrintWriter getWriter(Socket socket) throws IOException {
             //获得输出流缓冲区的地址
             OutputStream socketOut = socket.getOutputStream();
-            //网络流写出需要使用flush，这里在printWriter构造方法直接设置为自动flush
+            //自动刷新数据
             return new PrintWriter(new OutputStreamWriter(socketOut, StandardCharsets.UTF_8), true);
         }
 
@@ -116,7 +115,7 @@ public class ServerThread {
 
         @Override
         public void run() {
-            //本地服务器控制台显示客户端连接的用户信息
+            //控制台用于显示客户端连接的用户信息
             System.out.println("New connection has accessed:" + socket.getInetAddress().getHostAddress());
             try {
                 BufferedReader br = getReader(socket);
@@ -133,7 +132,6 @@ public class ServerThread {
                     AtomicBoolean flag = new AtomicBoolean(false);
                     users.forEach((k, v) -> {
                         if (v.equals(finalHostName)) {
-                            //线程修改了全局变量
                             flag.set(true);
                         }
                     });
@@ -192,7 +190,6 @@ public class ServerThread {
                     if ("bye".equalsIgnoreCase(msg.trim())) {
                         pw.println("From Server：服务器已断开连接，结束服务！");
 
-                        //加当前用户名
                         System.out.println("用户" + localName + "离开。");
 
                         users.remove(socket, localName);
@@ -222,7 +219,7 @@ public class ServerThread {
                             pw.println("用户:" + v);
                         });
                     }
-                    //一对一私聊
+                    //一对一私信
                     else if ("O".equalsIgnoreCase(msg.trim())) {
                         pw.println("请输入私信人的用户名：");
 
@@ -233,22 +230,20 @@ public class ServerThread {
                         AtomicBoolean isExist = new AtomicBoolean(false);
                         users.forEach((k, v) -> {
                             if (v.equals(name)) {
-                                //全局变量与线程修改问题
                                 isExist.set(true);
                             }
 
                         });
-                        //对用户不存在的处理逻辑
+                        //对用户不存在的情况进行处理
                         Socket temp = null;
                         for (Map.Entry<Socket, String> mapEntry : users.entrySet()) {
                             if (mapEntry.getValue().equals(name)) {
                                 temp = mapEntry.getKey();
                             }
                         }
-                        //返回布尔类型的当前值
                         if (isExist.get()) {
                             isExist.set(false);
-                            //私信后有一方用户离开，另一方未知，仍然发信息而未收到回复，未处理这种情况
+                            //用于处理私聊状态时对方离线
                             while ((msg = br.readLine()) != null) {
                                 if (!"E".equals(msg) && !isLeaved(temp)) {
                                     sendToMember(msg, localName, temp);
@@ -264,7 +259,7 @@ public class ServerThread {
                             pw.println("用户不存在！");
                         }
                     }
-                    //选择群聊
+                    //群聊
                     else if ("G".equals(msg.trim())) {
                         pw.println("您已进入群聊。");
                         pw.println("请输入发送的消息");

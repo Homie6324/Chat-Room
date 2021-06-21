@@ -1,31 +1,31 @@
 
+Q
+java:S3740"/Provide the parametrized type for this generic.( ë¢ıÿÿÿÿ8©ıÉË¢/
+L
+java:S3740?"/Provide the parametrized type for this generic.(ôá‰è8ªıÉË¢/
+L
+java:S3740Q"/Provide the parametrized type for this generic.(ôá‰è8ªıÉË¢/
+D
+java:S2189(""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8«ıÉË¢/
+{	java:S135÷"YReduce the total number of break and continue statements in this loop to use at most one.(ú½©Òıÿÿÿÿ8¬ıÉË¢/
+{	java:S135Š"YReduce the total number of break and continue statements in this loop to use at most one.(ú½©Òıÿÿÿÿ8­ıÉË¢/
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ä‡¨¡8­ıÉË¢/
+Z	java:S106!"9Replace this use of System.out or System.err by a logger.(Ü¤¼şÿÿÿÿ8¿ıÉË¢/
+j	java:S100&"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ôÊ²8¿ıÉË¢/
+o
+java:S3776u"RRefactor this method to reduce its Cognitive Complexity from 71 to the 15 allowed.(“–ış8ÈıÉË¢/
+T	java:S106w"9Replace this use of System.out or System.err by a logger.(µ€8ÉıÉË¢/
+[	java:S106™"9Replace this use of System.out or System.err by a logger.(’´ñ™úÿÿÿÿ8ÍıÉË¢/
+V	java:S106"9Replace this use of System.out or System.err by a logger.(ù¢Ã8ÍıÉË¢/
+^	java:S125ª"<This block of commented-out lines of code should be removed.(û«Ó³ùÿÿÿÿ8ÏıÉË¢/
+[	java:S106¬"9Replace this use of System.out or System.err by a logger.(ÌÊò³ÿÿÿÿÿ8ÏıÉË¢/
+V	java:S106¯"9Replace this use of System.out or System.err by a logger.(´Öğı8ÏıÉË¢/
+U	java:S106²"9Replace this use of System.out or System.err by a logger.(°•Ş8ÏıÉË¢/
+V	java:S106Á"9Replace this use of System.out or System.err by a logger.(œ¬àÍ8ĞıÉË¢/
+[	java:S106Ç"9Replace this use of System.out or System.err by a logger.(ÌÊò³ÿÿÿÿÿ8ÑıÉË¢/
+V	java:S106Ê"9Replace this use of System.out or System.err by a logger.(´Öğı8ÑıÉË¢/
+U	java:S106Î"9Replace this use of System.out or System.err by a logger.(°•Ş8ÑıÉË¢/
 J
-java:S3740"/Provide the parametrized type for this generic.( ë¢ıÿÿÿÿ
-E
-java:S3740?"/Provide the parametrized type for this generic.(ôá‰è
-E
-java:S3740Q"/Provide the parametrized type for this generic.(ôá‰è
-=
-java:S2189(""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ
-{	java:S135û"YReduce the total number of break and continue statements in this loop to use at most one.(ú½©Òıÿÿÿÿ8…«Œ¢/
-{	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(ú½©Òıÿÿÿÿ8”«Œ¢/
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ä‡¨¡
-S	java:S106!"9Replace this use of System.out or System.err by a logger.(Ü¤¼şÿÿÿÿ
-c	java:S100'"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ôÊ²
-h
-java:S3776u"RRefactor this method to reduce its Cognitive Complexity from 71 to the 15 allowed.(“–ış
-M	java:S106w"9Replace this use of System.out or System.err by a logger.(µ€
-T	java:S106š"9Replace this use of System.out or System.err by a logger.(’´ñ™úÿÿÿÿ
-O	java:S106"9Replace this use of System.out or System.err by a logger.(ù¢Ã
-W	java:S125«"<This block of commented-out lines of code should be removed.(û«Ó³ùÿÿÿÿ
-T	java:S106­"9Replace this use of System.out or System.err by a logger.(ÌÊò³ÿÿÿÿÿ
-O	java:S106°"9Replace this use of System.out or System.err by a logger.(´Öğı
-N	java:S106³"9Replace this use of System.out or System.err by a logger.(°•Ş
-O	java:S106Ã"9Replace this use of System.out or System.err by a logger.(œ¬àÍ
-[	java:S106É"9Replace this use of System.out or System.err by a logger.(ÌÊò³ÿÿÿÿÿ8ºö‚¢/
-V	java:S106Ì"9Replace this use of System.out or System.err by a logger.(´Öğı8ºö‚¢/
-U	java:S106Ğ"9Replace this use of System.out or System.err by a logger.(°•Ş8ò«Œ¢/
-J
-java:S1602Ü",Remove useless curly braces around statement(„·„Ÿ8ò«Œ¢/
-E
-java:S2093x"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+java:S1602Ú",Remove useless curly braces around statement(„·„Ÿ8ÒıÉË¢/
+L
+java:S2093x"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8ÖıÉË¢/

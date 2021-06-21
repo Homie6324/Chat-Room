@@ -118,7 +118,7 @@ public class ClientThread extends Application {
         Scene scene = new Scene(mainPane, 800, 600);
         primaryStage.setScene(scene);
         primaryStage.show();
-        //连接服务器之前，发送bye后禁用发送按钮，禁用Enter发送信息输入区域，禁用下载按钮
+        //未连接服务器时，将聊天输入框和发送按钮禁用
         btSend.setDisable(true);
         tfSend.setDisable(true);
 
@@ -154,7 +154,6 @@ public class ClientThread extends Application {
                     //从服务器接收一串字符
                     String receiveMsg = null;
                     while ((receiveMsg = client.receive()) != null) {
-                        //lambda表达式不能直接访问外部非final类型局部变量，需要定义一个临时变量
                         String msgTemp = receiveMsg;
                         //收消息并显示
                         //在非Fx线程要执行Fx线程相关的任务，必须在 Platform.runlater 中执行
@@ -171,7 +170,7 @@ public class ClientThread extends Application {
                 });
 
                 readThread.start();
-                //连接服务器之后未结束服务前禁用再次连接
+                //连接服务器之后但害没结束服务前禁用再次连接
                 btConn.setDisable(true);
                 //重新连接服务器时启用输入发送功能
                 tfSend.setDisable(false);
@@ -183,7 +182,7 @@ public class ClientThread extends Application {
 
 //        btConn.defaultButtonProperty();
 
-        //发送按钮事件
+        //发送按钮
         btSend.setOnAction(event -> {
             String msg = tfSend.getText();
             Date now = new Date();
@@ -192,12 +191,12 @@ public class ClientThread extends Application {
             client.send(msg);
             taDisplay.appendText(sdf.format(now) + "\n");
             taDisplay.appendText("I say：" + msg + "\n");
-            if (msg.equalsIgnoreCase("bye")) {
-                //发送bye后禁用发送按钮
+            if ("bye".equalsIgnoreCase(msg)) {
+                //禁用发送按钮
                 btSend.setDisable(true);
                 //禁用Enter发送信息输入区域
                 tfSend.setDisable(true);
-                //结束服务后再次启用连接按钮
+                //发送bye后禁用发送按钮
                 btConn.setDisable(false);
             }
 
@@ -219,7 +218,7 @@ public class ClientThread extends Application {
 //            }
 //            tfSend.clear();
 //        });
-        //对输入区域绑定键盘事件
+        //对输入区域绑定键盘
         tfSend.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.ENTER) {
                 String msg = tfSend.getText();
@@ -230,18 +229,18 @@ public class ClientThread extends Application {
                 taDisplay.appendText("I say：" + msg + "\n");
 
                 if ("bye".equalsIgnoreCase(msg)) {
-                    //禁用Enter发送信息输入区域
+                    //禁用发送按钮
                     tfSend.setDisable(true);
-                    //发送bye后禁用发送按钮
+                    //禁用Enter发送信息输入区域
                     btSend.setDisable(true);
-                    //结束服务后再次启用连接按钮
+                    //发送bye后禁用发送按钮
                     btConn.setDisable(false);
                 }
                 tfSend.clear();
             }
         });
 
-        //退出按钮的设计
+        //退出按钮
         btExit.setOnAction(event -> {
             try {
                 exit();
@@ -263,7 +262,7 @@ public class ClientThread extends Application {
         if (client != null) {
             client.send("bye");
             Thread.sleep(1500);
-            //多线程等待，关闭窗口时还有线程等待IO，设置1s间隔保证所有线程已关闭
+            //多线程等待，关闭窗口时还有线程等待IO，设置1.5s间隔保证所有线程已关闭
             client.close();
             System.out.println("即将自动关闭");
         }
