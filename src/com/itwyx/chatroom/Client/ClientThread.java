@@ -55,6 +55,7 @@ public class ClientThread extends Application {
 
 
     private final Button btConn = new Button("连接");
+
     private Client client;
     private Thread readThread;
 
@@ -68,9 +69,10 @@ public class ClientThread extends Application {
 //        Image image = new Image("file:/com/itwyx/chatroom/img/background2.png");
 //        BackgroundImage backgroundImage = new BackgroundImage(image,null,null,null,null);
 //        btConn.setBackground(new Background(backgroundImage));
-        BackgroundImage myBI = new BackgroundImage(new Image("file:/com/itwyx/chatroom/img/background.png", 32, 32, false, true), BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
+        BackgroundImage myBi = new BackgroundImage(new Image("file:/com/itwyx/chatroom/img/background1.png", 800, 600, false, true), BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.DEFAULT,
                 BackgroundSize.DEFAULT);
-        mainPane.setBackground(new Background(myBI));
+        mainPane.setBackground(new Background(myBi));
+        mainPane.setVisible(true);
 //        BackgroundFill myBF = new BackgroundFill(Color.gray(100),new CornerRadii(1),
 //                new Insets(0.0,0.0,0.0,0.0));
 //
@@ -181,6 +183,7 @@ public class ClientThread extends Application {
         });
 
 //        btConn.defaultButtonProperty();
+
 
         //发送按钮
         btSend.setOnAction(event -> {
