@@ -1,12 +1,6 @@
-<<<<<<< Updated upstream
-# Chat-Room1
---- 
-### Java课程设计
-=======
 # Chat-Room
 ---
-### Java课程设计1
->>>>>>> Stashed changes
+### Java课程设计
 ---
 
 ##### 多人聊天工具
