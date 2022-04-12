@@ -15,7 +15,7 @@ body:
     id: contact
     attributes:
       label: Contact Details
-      description: - [ ] https://github.com/octo-org/octo-repo/issues/740
+      description: How can we get in touch with you if we need more info?
       placeholder: ex. email@example.com
     validations:
       required: false
