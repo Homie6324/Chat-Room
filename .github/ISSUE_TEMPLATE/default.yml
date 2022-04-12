@@ -8,8 +8,8 @@ body:
   - type: markdown
     attributes:
       value: |
-      Thanks for taking the time to fill out this bug report!
-      ???
+        Thanks for taking the time to fill out this bug report!
+        If you need real-time help, join us on Discord.
   - type: input
     id: contact
     attributes:
