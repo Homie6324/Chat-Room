@@ -1,7 +1,7 @@
 blank_issues_enabled: true
 contact_links:
   - name: GitHub Community Support
-    url: https://fandai.761746229.workers.dev
+    url: https://fandai.761746229.workers.dev/
     about: Please ask and answer questions here.
   - name: GitHub Security Bug Bounty
     url: https://bounty.github.com/
